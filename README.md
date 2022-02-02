@@ -10,22 +10,32 @@ Prototype project for demonstrating using terraform to set up SQS, Lambda, and S
 
 Start docker:
 
-```docker-compose up```
+```
+docker-compose up
+```
 
 Init Terraform:
 
-```cd terraform/```
-```terraform init```
+```
+cd terraform/
+terraform init
+```
 
 Create resources
 
-```terraform apply```
+```
+terraform apply
+```
 
 Invoke s3_reader Lambda
 
-```aws --region=us-east-1 --endpoint-url=http://localhost:4566 lambda invoke --function=s3_reader outputfile.txt```
+```
+aws --region=us-east-1 --endpoint-url=http://localhost:4566 lambda invoke --function=s3_reader outputfile.txt
+```
 
 View logs
 
-```aws --region=us-east-1 --endpoint-url=http://localhost:4566 logs tail /aws/lambda/test_lambda```
-```aws --region=us-east-1 --endpoint-url=http://localhost:4566 logs tail /aws/lambda/s3_reader```
+```
+aws --region=us-east-1 --endpoint-url=http://localhost:4566 logs tail /aws/lambda/test_lambda
+aws --region=us-east-1 --endpoint-url=http://localhost:4566 logs tail /aws/lambda/s3_reader
+```
