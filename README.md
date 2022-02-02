@@ -8,6 +8,11 @@ Prototype project for demonstrating using terraform to set up SQS, Lambda, and S
 
 ## How to use
 
+'Configure' Fake AWS Access: (set whatever values you want)
+```
+aws configure
+```
+
 Start docker:
 
 ```
